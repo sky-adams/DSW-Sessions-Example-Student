@@ -18,8 +18,8 @@ def renderMain():
 
 @app.route('/startOver')
 def startOver():
-    #clear variable values and create a new session
-    session.clear()
+    #TODO: delete everything from the session
+    
     return redirect(url_for('renderMain')) # url_for('renderMain') could be replaced with '/'
 
 @app.route('/page1')
@@ -28,15 +28,14 @@ def renderPage1():
 
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
-    #set the first and last name in the session
-    session["firstName"] = request.form["firstName"]
-    session["lastName"] = request.form["lastName"]
+    #TODO: set the first and last name in the session
+    
     return render_template('page2.html')
 
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
-    #set the favorite color in the session
-    session["favoriteColor"] = request.form["favoriteColor"]
+    #TODO: set the favorite color in the session
+    
     return render_template('page3.html')
     
 if __name__=="__main__":
